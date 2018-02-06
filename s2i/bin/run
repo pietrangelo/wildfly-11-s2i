@@ -1,5 +1,2 @@
 #!/bin/bash
 exec /wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
-
-### Add a default admin user to access management console
-exec /wildfly/bin/add-user.sh admin Password1! --silent
