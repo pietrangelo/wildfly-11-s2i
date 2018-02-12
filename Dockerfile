@@ -28,13 +28,22 @@ RUN INSTALL_PKGS="tar git unzip bc which lsof java-1.8.0-openjdk java-1.8.0-open
     mkdir -p $HOME/.m2 && \
     mkdir -p /wildfly && \
     (curl -v https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz | tar -zx --strip-components=1 -C /wildfly) && \
-    mkdir -p /opt/s2i/destination 
+    mkdir -p /opt/s2i/destination
 
 # Add s2i wildfly customizations
 ADD ./contrib/wfmodules/ /wildfly/modules/
 ADD ./contrib/wfbin/standalone.conf /wildfly/bin/standalone.conf
 ADD ./contrib/wfcfg/standalone.xml /wildfly/standalone/configuration/standalone.xml
 ADD ./contrib/settings.xml $HOME/.m2/
+
+# install Entando core dependencies
+RUN git clone https://github.com/entando/entando-core.git && \
+    git clone https://github.com/entando/entando-components.git && \
+    git clone https://github.com/entando/entando-archetypes.git && \
+    cd entando-core && mvn install -DskipTests && mvn clean && \
+    cd ../entando-components && mvn install -DskipTests && mvn clean && \
+    cd ../entando-archetypes && mvn install -DskipTests && mvn clean && \
+    cd .. rm -rf entando*
 
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
