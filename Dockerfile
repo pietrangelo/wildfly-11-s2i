@@ -49,7 +49,7 @@ RUN git clone https://github.com/entando/entando-core.git && \
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 
 RUN chown -R 1001:0 /wildfly && chown -R 1001:0 $HOME && \
-    chmod -R ug+rw /wildfly && \
+    chmod -R ug+rw /wildfly && chmod -R ug+rw $HOME && \
     chmod -R g+rw /opt/s2i/destination
 
 USER 1001
