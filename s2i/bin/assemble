@@ -209,7 +209,7 @@ function move_artifacts() {
 }
 
 ADMIN=admin
-PASSWORD=passw0rd_
+PASSWORD=Password1!
 
 # Source code provided to S2I is at ${HOME}
 LOCAL_SOURCE_DIR=${HOME}
@@ -352,7 +352,7 @@ echo "...done"
 # at build time, so don't do this for now.
 
 # add admin user
-#/wildfly/bin/add-user.sh $ADMIN $PASSWORD --silent
+/wildfly/bin/add-user.sh $ADMIN $PASSWORD --silent
 
 #echo "Starting wildfly for deployment"
 #/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0 &
