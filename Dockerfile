@@ -28,7 +28,8 @@ RUN INSTALL_PKGS="tar git unzip bc which lsof java-1.8.0-openjdk java-1.8.0-open
     mkdir -p $HOME/.m2 && \
     mkdir -p /wildfly && \
     (curl -v https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz | tar -zx --strip-components=1 -C /wildfly) && \
-    mkdir -p /opt/s2i/destination
+    mkdir -p /opt/s2i/destination && \
+    mkdir -p $HOME/.m2/repository
 
 # Add s2i wildfly customizations
 ADD ./contrib/wfmodules/ /wildfly/modules/
@@ -40,9 +41,9 @@ ADD ./contrib/settings.xml $HOME/.m2/
 RUN git clone https://github.com/entando/entando-core.git && \
     git clone https://github.com/pietrangelo/entando-components.git && \
     git clone https://github.com/entando/entando-archetypes.git && \
-    cd entando-core && mvn install -DskipTests && mvn clean && \
-    cd ../entando-components && mvn install -DskipTests && mvn clean && \
-    cd ../entando-archetypes && mvn install -DskipTests && mvn clean && \
+    cd entando-core && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
+    cd ../entando-components && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
+    cd ../entando-archetypes && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
     rm -rf /opt/app-root/src/entando*
 
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
