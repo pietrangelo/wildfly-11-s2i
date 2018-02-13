@@ -38,12 +38,12 @@ ADD ./contrib/settings.xml $HOME/.m2/
 
 # install Entando core dependencies
 RUN git clone https://github.com/entando/entando-core.git && \
-    git clone https://github.com/entando/entando-components.git && \
+    git clone https://github.com/pietrangelo/entando-components.git && \
     git clone https://github.com/entando/entando-archetypes.git && \
     cd entando-core && mvn install -DskipTests && mvn clean && \
     cd ../entando-components && mvn install -DskipTests && mvn clean && \
     cd ../entando-archetypes && mvn install -DskipTests && mvn clean && \
-    cd .. rm -rf entando*
+    rm -rf /opt/app-root/src/entando*
 
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
