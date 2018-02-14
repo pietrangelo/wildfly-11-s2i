@@ -404,30 +404,6 @@
                 </invalidation-cache>
                 <replicated-cache name="timestamps" mode="ASYNC"/>
             </cache-container>
-            <cache-container name="entando" jndi-name="java:jboss/infinispan/entando" statistics-enabled="true">
-                <distributed-cache name="Entando_Cache" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_PageManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_PageModelManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_WidgetTypeManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_CategoryManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_ConfigManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_RoleManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_GroupManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_LangManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_CacheInfoManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_I18nManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_ApiCatalogManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_InitializerManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_DataObjectManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_DataObjectModelManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_DataObjectPageMapperManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_UserProfileManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_jacmsContentManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_ContentModelManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_ContentPageMapperManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_ResourceManager" statistics-enabled="true" mode="SYNC"/>
-                <distributed-cache name="Entando_KeyGeneratorManager" statistics-enabled="true" mode="SYNC"/>
-            </cache-container>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:jaxrs:1.0"/>
         <subsystem xmlns="urn:jboss:domain:jca:5.0">
