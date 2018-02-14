@@ -404,6 +404,31 @@
                 </invalidation-cache>
                 <replicated-cache name="timestamps" mode="ASYNC"/>
             </cache-container>
+            <cache-container name="entando" jndi-name="java:jboss/infinispan/entando" statistics-enabled="true">
+                <transport lock-timeout="60000"/>
+                <distributed-cache name="Entando_Cache" />
+                <distributed-cache name="Entando_PageManager" />
+                <distributed-cache name="Entando_PageModelManager" />
+                <distributed-cache name="Entando_WidgetTypeManager" />
+                <distributed-cache name="Entando_CategoryManager" />
+                <distributed-cache name="Entando_ConfigManager" />
+                <distributed-cache name="Entando_RoleManager" />
+                <distributed-cache name="Entando_GroupManager" />
+                <distributed-cache name="Entando_LangManager" />
+                <distributed-cache name="Entando_CacheInfoManager" />
+                <distributed-cache name="Entando_I18nManager" />
+                <distributed-cache name="Entando_ApiCatalogManager" />
+                <distributed-cache name="Entando_InitializerManager" />
+                <distributed-cache name="Entando_DataObjectManager" />
+                <distributed-cache name="Entando_DataObjectModelManager" />
+                <distributed-cache name="Entando_DataObjectPageMapperManager" />
+                <distributed-cache name="Entando_UserProfileManager" />
+                <distributed-cache name="Entando_jacmsContentManager" />
+                <distributed-cache name="Entando_ContentModelManager" />
+                <distributed-cache name="Entando_ContentPageMapperManager" />
+                <distributed-cache name="Entando_ResourceManager" />
+                <distributed-cache name="Entando_KeyGeneratorManager"/>
+            </cache-container>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:jaxrs:1.0"/>
         <subsystem xmlns="urn:jboss:domain:jca:5.0">
