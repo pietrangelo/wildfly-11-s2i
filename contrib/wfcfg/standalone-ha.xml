@@ -506,7 +506,7 @@
                 <stack name="tcpping">
            	    <transport type="TCP" socket-binding="jgroups-tcp"/>
            	    <protocol type="TCPPING">
-               	    <property name="initial_hosts">${INFINISPAN_JGROUPS_INITIAL_HOSTS}</property>
+               	    <!--<property name="initial_hosts">${env.OPENSHIFT_JBOSSAS_CLUSTER}</property>-->
                	    <property name="num_initial_members">0</property>
                	    <property name="port_range">0</property>
                	    <property name="timeout">2000</property>
