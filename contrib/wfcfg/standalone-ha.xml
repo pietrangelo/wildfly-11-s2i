@@ -454,7 +454,7 @@
         <subsystem xmlns="urn:jboss:domain:jgroups:5.0" default-stack="tcpping">
             <channels default="ee">
                <!-- <channel name="ee" stack="udp" cluster="ejb"/> -->
-               <channel name="ee" stack="tcpping">
+               <channel name="ee" stack="tcpping"/>
             </channels>
             <stacks>
                 <stack name="udp">
