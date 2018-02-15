@@ -451,7 +451,7 @@
             <cached-connection-manager/>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:jdr:1.0"/>
-        <subsystem xmlns="urn:jboss:domain:jgroups:5.0" default-stack="udp">
+        <subsystem xmlns="urn:jboss:domain:jgroups:5.0" default-stack="tcp">
             <channels default="ee">
                 <channel name="ee" stack="udp" cluster="ejb"/>
             </channels>
@@ -476,6 +476,7 @@
                 <stack name="tcp">
                     <transport type="TCP" socket-binding="jgroups-tcp"/>
                     <socket-protocol type="MPING" socket-binding="jgroups-mping"/>
+                    <protocol type="openshift.KUBE_PING">
                     <protocol type="MERGE3"/>
                     <protocol type="FD_SOCK"/>
                     <protocol type="FD_ALL"/>
