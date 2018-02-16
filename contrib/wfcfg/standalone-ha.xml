@@ -454,7 +454,7 @@
         <subsystem xmlns="urn:jboss:domain:jgroups:5.0" default-stack="tcp">
             <channels default="ee">
                <!-- <channel name="ee" stack="udp" cluster="ejb"/> -->
-               <channel name="ee" stack="tcp"/>
+               <channel name="ee" stack="tcp" cluster="entando"/>
             </channels>
             <stacks>
                 <stack name="udp">
