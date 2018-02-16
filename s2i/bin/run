@@ -1,2 +1,2 @@
 #!/bin/bash
-exec /wildfly/bin/standalone.sh -Djboss.node.name=$HOSTNAME -Djgroups.bind_addr=0.0.0.0 -Djava.net.preferIPv4Stack=true -Djboss.default.jgroups.stack=kubernetes -b 0.0.0.0 -bmanagement 0.0.0.0 -c standalone-ha.xml
+exec /wildfly/bin/standalone.sh -Djboss.node.name=$HOSTNAME -Djgroups.bind_addr=0.0.0.0 -u 230.0.0.4 -Djava.net.preferIPv4Stack=true -Djboss.default.jgroups.stack=kubernetes -b 0.0.0.0 -bmanagement 0.0.0.0 -c standalone-ha.xml
