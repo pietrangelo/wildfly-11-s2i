@@ -7,7 +7,7 @@ MAINTAINER Pietrangelo Masala <p.masala@entando.com>
 
 EXPOSE 8080 9990 8181 8888 11211 11222 57600 7600 45700 45688 23364 4712 4713
 
-ENV WILDFLY_VERSION=10.1.0.Final \
+ENV WILDFLY_VERSION=11.0.0.Final \
     MAVEN_VERSION=3.5.2
 
 LABEL io.k8s.description="Platform for building and running JEE applications on WildFly 11.0.0.Final" \
