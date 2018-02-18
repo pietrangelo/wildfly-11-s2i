@@ -40,7 +40,7 @@ ADD ./contrib/settings.xml $HOME/.m2/
 
 # install Entando core dependencies
 RUN git clone https://github.com/entando/entando-core.git && \
-    git clone https://github.com/pietrangelo/entando-components.git && \
+    git clone https://github.com/entando/entando-components.git && \
     git clone https://github.com/entando/entando-archetypes.git && \
     cd entando-core && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
     cd ../entando-components && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
