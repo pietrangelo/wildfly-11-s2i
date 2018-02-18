@@ -7,7 +7,7 @@ The project has been adapted to run on OpenShift platform as a cloud-native appl
 
 ## Environment Variables
 
-To be able to let OpenShift connect to the entando Data layer you have to create at least these environment variables on your OpenShift project:
+To be able to let OpenShift connect to the entando Data layer you have to create at least those environment variables on your OpenShift project:
 
 - PG-USERNAME
 - PG-PASSWORD
