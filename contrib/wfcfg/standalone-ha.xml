@@ -601,7 +601,7 @@
             </filters>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:webservices:2.0">
-            <wsdl-host>${jboss.bind.address:127.0.0.1}</wsdl-host>
+            <wsdl-host>${jboss.bind.address:${jboss.node.name}}</wsdl-host>
             <endpoint-config name="Standard-Endpoint-Config"/>
             <endpoint-config name="Recording-Endpoint-Config">
                 <pre-handler-chain name="recording-handlers" protocol-bindings="##SOAP11_HTTP ##SOAP11_HTTP_MTOM ##SOAP12_HTTP ##SOAP12_HTTP_MTOM">
@@ -614,13 +614,13 @@
     </profile>
     <interfaces>
         <interface name="management">
-            <inet-address value="${jboss.bind.address.management:127.0.0.1}"/>
+            <inet-address value="${jboss.bind.address.management:${jboss.node.name}}"/>
         </interface>
         <interface name="public">
-            <inet-address value="${jboss.bind.address:127.0.0.1}"/>
+            <inet-address value="${jboss.bind.address:${jboss.node.name}}"/>
         </interface>
         <interface name="private">
-            <inet-address value="${jboss.bind.address.private:127.0.0.1}"/>
+            <inet-address value="${jboss.bind.address.private:${jboss.node.name}}"/>
         </interface>
         <interface name="cluster">
             <subnet-match value="172.0.0.0/8"/>
