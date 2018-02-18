@@ -151,12 +151,12 @@
                         <password>sa</password>
                     </security>
                 </datasource>
-                <datasource jndi-name="java:jboss/datasources/entandoDbPort" enabled="true" use-java-context="true" pool-name="entandoDbPortDataSource" use-ccm="true">
-                    <connection-url>jdbc:postgresql://www.entando.com:5433/entandoDbPort</connection-url>
+                <datasource jndi-name="${env.PG-ENTANDO-PORT-DB-JNDI-NAME}" enabled="true" use-java-context="true" pool-name="entandoDbPortDataSource" use-ccm="true">
+                    <connection-url>jdbc:postgresql://${env.PG-ENTANDO-PORT-DB-CONNECTION-STRING}</connection-url>
                     <driver>postgresql</driver>
                     <security>
-                      <user-name>entando</user-name>
-                      <password>entando</password>
+                      <user-name>${env.PG-USERNAME}</user-name>
+                      <password>${env.PG-PASSWORD}</password>
                     </security>
                     <validation>
                         <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
@@ -168,12 +168,12 @@
                         <flush-strategy>IdleConnections</flush-strategy>
                     </pool>
                 </datasource>
-                <datasource jndi-name="java:jboss/datasources/entandoDbServ" enabled="true" use-java-context="true" pool-name="entandoDbServDataSource" use-ccm="true">
-                    <connection-url>jdbc:postgresql://www.entando.com:5433/entandoDbServ</connection-url>
+                <datasource jndi-name="${env.PG-ENTANDO-SERV-DB-JNDI-NAME}" enabled="true" use-java-context="true" pool-name="entandoDbServDataSource" use-ccm="true">
+                    <connection-url>jdbc:postgresql://${env.PG-ENTANDO-SERV-DB-CONNECTION-STRING}</connection-url>
                     <driver>postgresql</driver>
                     <security>
-                      <user-name>entando</user-name>
-                      <password>entando</password>
+                      <user-name>${env.PG-USERNAME}</user-name>
+                      <password>${env.PG-PASSWORD}</password>
                     </security>
                     <validation>
                         <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
