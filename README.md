@@ -9,10 +9,10 @@ The project has been adapted to run on OpenShift platform as a cloud-native appl
 
 To be able to let OpenShift connect to the entando Data layer you have to create at least those environment variables on your OpenShift project:
 
-- `PG-USERNAME`
-- `PG-PASSWORD`
-- `PG-ENTANDO-PORT-DB-JNDI-NAME` (the entire string defined in jbossBaseSystemConfig.xml configuration file)
-- `PG-ENTANDO-SERV-DB-JNDI-NAME` (the entire string defined in jbossBaseSystemConfig.xml configuration file)
-- `PG-ENTANDO-PORT-DB-CONNECTION-STRING` (host:port/dbName)
-- `PG-ENTANDO-SERV-DB-CONNECTION-STRING` (host:port/(dbName)
+- `PG_USERNAME`
+- `PG_PASSWORD`
+- `PG_ENTANDO_PORT_DB_JNDI_NAME` (the entire string defined in jbossBaseSystemConfig.xml configuration file)
+- `PG_ENTANDO_SERV_DB_JNDI_NAME` (the entire string defined in jbossBaseSystemConfig.xml configuration file)
+- `PG_ENTANDO_PORT_DB_CONNECTION_STRING` (host:port/dbName)
+- `PG_ENTANDO_SERV_DB_CONNECTION_STRING` (host:port/(dbName)
 
