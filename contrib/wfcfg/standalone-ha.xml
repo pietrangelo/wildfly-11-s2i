@@ -151,12 +151,12 @@
                         <password>sa</password>
                     </security>
                 </datasource>
-                <datasource jndi-name="${env.PG-ENTANDO-PORT-DB-JNDI-NAME}" enabled="true" use-java-context="true" pool-name="entandoDbPortDataSource" use-ccm="true">
-                    <connection-url>jdbc:postgresql://${env.PG-ENTANDO-PORT-DB-CONNECTION-STRING}</connection-url>
+                <datasource jndi-name="${env.PG_ENTANDO_PORT_DB_JNDI_NAME}" enabled="true" use-java-context="true" pool-name="entandoDbPortDataSource" use-ccm="true">
+                    <connection-url>jdbc:postgresql://${env.PG_ENTANDO_PORT_DB_CONNECTION_STRING}</connection-url>
                     <driver>postgresql</driver>
                     <security>
-                      <user-name>${env.PG-USERNAME}</user-name>
-                      <password>${env.PG-PASSWORD}</password>
+                      <user-name>${env.PG_USERNAME}</user-name>
+                      <password>${env.PG_PASSWORD}</password>
                     </security>
                     <validation>
                         <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
@@ -168,12 +168,12 @@
                         <flush-strategy>IdleConnections</flush-strategy>
                     </pool>
                 </datasource>
-                <datasource jndi-name="${env.PG-ENTANDO-SERV-DB-JNDI-NAME}" enabled="true" use-java-context="true" pool-name="entandoDbServDataSource" use-ccm="true">
-                    <connection-url>jdbc:postgresql://${env.PG-ENTANDO-SERV-DB-CONNECTION-STRING}</connection-url>
+                <datasource jndi-name="${env.PG_ENTANDO_SERV_DB_JNDI_NAME}" enabled="true" use-java-context="true" pool-name="entandoDbServDataSource" use-ccm="true">
+                    <connection-url>jdbc:postgresql://${env.PG_ENTANDO_SERV_DB_CONNECTION_STRING}</connection-url>
                     <driver>postgresql</driver>
                     <security>
-                      <user-name>${env.PG-USERNAME}</user-name>
-                      <password>${env.PG-PASSWORD}</password>
+                      <user-name>${env.PG_USERNAME}</user-name>
+                      <password>${env.PG_PASSWORD}</password>
                     </security>
                     <validation>
                         <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
