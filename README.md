@@ -14,5 +14,5 @@ To be able to let OpenShift connect to the entando Data layer you have to create
 - PG-ENTANDO-PORT-DB-JNDI-NAME (the entire string defined in jbossBaseSystemConfig.xml configuration file)
 - PG-ENTANDO-SERV-DB-JNDI-NAME (the entire string defined in jbossBaseSystemConfig.xml configuration file)
 - PG-ENTANDO-PORT-DB-CONNECTION-STRING (host:port/dbName)
-- PG-ENTANDO-SERV-DB-CONNECTION-STRING (host:port(dbName)
+- PG-ENTANDO-SERV-DB-CONNECTION-STRING (host:port/(dbName)
 
