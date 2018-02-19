@@ -489,13 +489,13 @@
                 <stack name="tcpping">
                     <transport type="TCP" socket-binding="jgroups-tcp"/>
                     <protocol type="TCPPING">
-                        <property name="initial_hosts">192.168.10.1[7600],192.168.10.2[7600]</property>
+                        <property name="initial_hosts">${jboss.node.name}[7600]</property>
                         <property name="port_range">10</property>
                         <property name="timeout">3000</property>
-                        <property name="num_initial_members">2</property>
+                        <property name="num_initial_members">1</property>
                     </protocol>
                     <protocol type="MERGE3"/>
-                    <protocol type="FD_SOCK" socket-binding="jgroups-tcp-fd"/>
+                    <protocol type="FD_SOCK"/>
                     <protocol type="FD_ALL"/>
                     <protocol type="VERIFY_SUSPECT"/>
                     <protocol type="BARRIER"/>
