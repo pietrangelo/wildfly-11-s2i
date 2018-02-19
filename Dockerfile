@@ -43,7 +43,7 @@ RUN git clone https://github.com/entando/entando-core.git && \
     git clone https://github.com/entando/entando-components.git && \
     git clone https://github.com/entando/entando-archetypes.git && \
     cd entando-core && git checkout EN-4.3.2-CloudNative && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
-    cd ../entando-components &&0 git checkout EN-4.3.2-CloudNative && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
+    cd ../entando-components && git checkout EN-4.3.2-CloudNative && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
     cd ../entando-archetypes && git checkout EN-4.3.2-CloudNative && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
     rm -rf /opt/app-root/src/entando*
 
