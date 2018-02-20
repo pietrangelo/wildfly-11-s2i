@@ -645,7 +645,7 @@
             <inet-address value="${jboss.bind.address.private:${jboss.node.name}}"/>
         </interface>
         <interface name="cluster">
-            <subnet-match value="172.0.0.0/8"/>
+            <subnet-match value="10.0.0.0/8"/>
             <up/>
             <multicast/>
             <not>
