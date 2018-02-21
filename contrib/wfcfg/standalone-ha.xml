@@ -493,7 +493,7 @@
                 <stack name="tcpping">
                     <transport type="TCP" socket-binding="jgroups-tcp"/>
                     <protocol type="TCPPING">
-                        <property name="initial_hosts">loopback[7600],match-interface:eth0[7600]</property>
+                        <property name="initial_hosts">match-interface:eth0[7600]</property>
                         <property name="port_range">0</property>
                         <property name="num_initial_members">1</property>
                     </protocol>
