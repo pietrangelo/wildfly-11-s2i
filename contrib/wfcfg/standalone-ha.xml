@@ -453,7 +453,7 @@
         <subsystem xmlns="urn:jboss:domain:jdr:1.0"/>
         <subsystem xmlns="urn:jboss:domain:jgroups:5.0">
             <channels default="ee">
-                <channel name="ee" stack="udp" cluster="entando"/>
+                <channel name="ee" stack="tcpping" cluster="entando"/>
             </channels>
             <stacks>
                 <stack name="udp">
@@ -489,8 +489,8 @@
                 <stack name="tcpping">
                     <transport type="TCP" socket-binding="jgroups-tcp"/>
                     <protocol type="TCPPING">
-                        <property name="initial_hosts">${jboss.node.name}[7600]</property>
-                        <property name="port_range">10</property>
+                        <property name="initial_hosts">127.0.0.1[7600]</property>
+                        <property name="port_range">0</property>
                         <property name="timeout">3000</property>
                         <property name="num_initial_members">1</property>
                     </protocol>
