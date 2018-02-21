@@ -472,7 +472,7 @@
                     <protocol type="FRAG2"/>
                 </stack>
                 <stack name="tcp">
-                    <protocol type="org.jgroups.protocols.JDBC_PING">
+                    <protocol type="JDBC_PING">
                         <property name="datasource_jndi_name">
                             java:jboss/datasources/entandoDbServ
                         </property>
