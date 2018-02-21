@@ -473,7 +473,7 @@
                 </stack>
                 <stack name="tcp">
                     <transport type="TCP" socket-binding="jgroups-tcp"/>
-                    <protocol type="JDBC_PING">
+                    <protocol type="org.jgroups.protocols.JDBC_PING">
                         <property name="datasource_jndi_name">
                             java:jboss/datasources/entandoDbServ
                         </property>
