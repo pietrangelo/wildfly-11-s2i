@@ -473,10 +473,10 @@
                 </stack>
                 <stack name="tcp">
                     <transport type="TCP" socket-binding="jgroups-tcp">
-                        <property name="external_addr">${jboss.node.name}</property>
+                        <property name="external_addr">127.0.0.1</property>
                         <property name="external_port">7600</property>
                         <property name="bind_port">7600</property>
-                        <property name="bind_addr">${jboss.node.name}</property>
+                        <property name="bind_addr">127.0.0.1</property>
                     </transport>
                     <protocol type="PING"/>
                     <protocol type="MERGE3"/>
@@ -493,7 +493,7 @@
                 <stack name="tcpping">
                     <transport type="TCP" socket-binding="jgroups-tcp"/>
                     <protocol type="TCPPING">
-                        <property name="initial_hosts">${jboss.node.name}[7600]</property>
+                        <property name="initial_hosts">127.0.0.1[7600]</property>
                         <property name="port_range">0</property>
                         <property name="num_initial_members">1</property>
                     </protocol>
