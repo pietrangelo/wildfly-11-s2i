@@ -472,8 +472,12 @@
                     <protocol type="FRAG2"/>
                 </stack>
                 <stack name="tcp">
-                    <transport type="TCP" socket-binding="jgroups-tcp"/>
-                    <!--<socket-protocol type="MPING" socket-binding="jgroups-mping"/>-->
+                    <transport type="TCP" socket-binding="jgroups-tcp">
+                        <property name="external_addr">${jboss.node.name}</property>
+                        <property name="external_port">7600</property>
+                        <property name="bind_port">7600</property>
+                        <property name="bind_addr">${jboss.node.name}</property>
+                    </transport>
                     <protocol type="PING"/>
                     <protocol type="MERGE3"/>
                     <protocol type="FD_SOCK"/>
@@ -489,9 +493,9 @@
                 <stack name="tcpping">
                     <transport type="TCP" socket-binding="jgroups-tcp"/>
                     <protocol type="TCPPING">
-                        <property name="initial_hosts">127.0.0.1[7600]</property>
+                        <property name="initial_hosts">${jboss.node.name}[7600]</property>
                         <property name="port_range">0</property>
-                        <property name="GMS.join_timeout">3000</property>
+                        <property name="num_initial_members">1</property>
                     </protocol>
                     <protocol type="MERGE3"/>
                     <protocol type="FD_SOCK"/>
@@ -506,6 +510,11 @@
                     <protocol type="MFC"/>
                     <protocol type="FRAG2"/>
                     <protocol type="RSVP"/>
+                    <protocol type="AUTH">
+                        <property name="auth_class">org.jgroups.auth.MD5Token</property>
+                        <property name="token_hash">SHA</property>
+                        <property name="auth_value">${jboss.node.name}</property>
+                    </protocol>
                 </stack>
             </stacks>
         </subsystem>
