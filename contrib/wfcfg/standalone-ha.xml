@@ -473,10 +473,10 @@
                 </stack>
                 <stack name="tcp">
                     <transport type="TCP" socket-binding="jgroups-tcp">
-                        <property name="external_addr">loopback,match-interface:eth0</property>
+                        <property name="external_addr">${jboss.node.name}</property>
                         <property name="external_port">7600</property>
                         <property name="bind_port">7600</property>
-                        <property name="bind_addr">loopback,match-interface:eth0</property>
+                        <property name="bind_addr">${jboss.node.name}</property>
                     </transport>
                     <protocol type="JDBC_PING">
                         <property name="datasource_jndi_name">
