@@ -472,16 +472,7 @@
                     <protocol type="FRAG2"/>
                 </stack>
                 <stack name="tcp">
-                    <TCP start_port="7800"
-                        bind_addr="${jboss.node.name}"
-                        loopback="true"
-                        down_thread="false" up_thread="false"/>
                     <transport type="TCP" socket-binding="jgroups-tcp"/>
-                    <protocol type="org.jgroups.protocols.JDBC_PING">
-                        <property name="datasource_jndi_name">
-                            java:jboss/datasources/entandoDbServ
-                        </property>
-                    </protocol>
                     <protocol type="PING"/>
                     <protocol type="MERGE3"/>
                     <protocol type="FD_SOCK"/>
