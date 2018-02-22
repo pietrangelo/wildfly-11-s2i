@@ -1,2 +1,2 @@
 #!/bin/bash
-exec /wildfly/bin/standalone.sh -Djboss.node.name=$HOSTNAME -Djgroups.bind_addr=$HOSTNAME -u 230.0.0.4 -Djava.net.preferIPv4Stack=true -bprivate=127.0.0.1 -b=127.0.0.1 -c standalone-ha.xml
+exec /wildfly/bin/standalone.sh -Djboss.node.name=$HOSTNAME -Djgroups.bind_addr=$HOSTNAME -u 230.0.0.4 -Djava.net.preferIPv4Stack=true -bcluster=127.0.0.1 -b=127.0.0.1 -c standalone-ha.xml
