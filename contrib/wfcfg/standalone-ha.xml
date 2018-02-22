@@ -489,7 +489,7 @@
                     <transport type="TCP" socket-binding="jgroups-tcp"/>
                     <protocol type="JDBC_PING">
                         <property name="datasource_jndi_name">
-                            java:jboss/datasources/entandoDbServ
+                            ${env.PG_ENTANDO_SERV_DB_JNDI_NAME}
                         </property>
                         <property name="initialize_sql">
                             CREATE TABLE IF NOT EXISTS jgroupsping (own_addr VARCHAR(200) NOT NULL, cluster_name VARCHAR(200) NOT NULL, ping_data BYTEA DEFAULT NULL, PRIMARY KEY (own_addr, cluster_name))
