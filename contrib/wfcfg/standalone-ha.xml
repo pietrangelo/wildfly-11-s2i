@@ -500,7 +500,9 @@
                     <protocol type="FD"/>
                     <protocol type="VERIFY_SUSPECT"/>
                     <protocol type="pbcast.NAKACK2"/>
-                    <protocol type="UNICAST3"/>
+                    <protocol type="UNICAST3">
+                        <property name="conn_close_timeout">5000</property>
+                    </protocol>
                     <protocol type="pbcast.STABLE"/>
                     <protocol type="pbcast.GMS"/>
                     <protocol type="MFC"/>
