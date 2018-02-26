@@ -413,28 +413,116 @@
             <cache-container name="entando" jndi-name="java:jboss/infinispan/entando" module="org.wildfly.clustering.server">
                 <transport lock-timeout="60000" channel="ee"/>
                 <invalidation-cache name="invalidation" mode="SYNC"/>
-                <distributed-cache name="Entando_Cache" mode="SYNC"/>
-                <distributed-cache name="Entando_PageManager" mode="SYNC"/>
-                <distributed-cache name="Entando_PageModelManager" mode="SYNC"/>
-                <distributed-cache name="Entando_WidgetTypeManager" mode="SYNC"/>
-                <distributed-cache name="Entando_CategoryManager" mode="SYNC"/>
-                <distributed-cache name="Entando_ConfigManager" mode="SYNC"/>
-                <distributed-cache name="Entando_RoleManager" mode="SYNC"/>
-                <distributed-cache name="Entando_GroupManager" mode="SYNC"/>
-                <distributed-cache name="Entando_LangManager" mode="SYNC"/>
-                <distributed-cache name="Entando_CacheInfoManager" mode="SYNC"/>
-                <distributed-cache name="Entando_I18nManager" mode="SYNC"/>
-                <distributed-cache name="Entando_ApiCatalogManager" mode="SYNC"/>
-                <distributed-cache name="Entando_InitializerManager" mode="SYNC"/>
-                <distributed-cache name="Entando_DataObjectManager" mode="SYNC"/>
-                <distributed-cache name="Entando_DataObjectModelManager" mode="SYNC"/>
-                <distributed-cache name="Entando_DataObjectPageMapperManager" mode="SYNC"/>
-                <distributed-cache name="Entando_UserProfileManager" mode="SYNC"/>
-                <distributed-cache name="Entando_jacmsContentManager" mode="SYNC"/>
-                <distributed-cache name="Entando_ContentModelManager" mode="SYNC"/>
-                <distributed-cache name="Entando_ContentPageMapperManager" mode="SYNC"/>
-                <distributed-cache name="Entando_ResourceManager" mode="SYNC"/>
-                <distributed-cache name="Entando_KeyGeneratorManager" mode="SYNC"/>
+                <distributed-cache name="Entando_Cache" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_PageManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_PageModelManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_WidgetTypeManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_CategoryManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_ConfigManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_RoleManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_GroupManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_LangManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_CacheInfoManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_I18nManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_ApiCatalogManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_InitializerManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_DataObjectManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_DataObjectModelManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_DataObjectPageMapperManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_UserProfileManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_jacmsContentManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_ContentModelManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_ContentPageMapperManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_ResourceManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
+                <distributed-cache name="Entando_KeyGeneratorManager" mode="ASYNC" owners="2" l1-lifespan="0">
+                    <locking isolation="REPEATABLE_READ"/>
+                    <transaction mode="BATCH"/>
+                    <file-store/>
+                </distributed-cache>
             </cache-container>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:jaxrs:1.0"/>
