@@ -411,7 +411,7 @@
                 <replicated-cache name="timestamps" mode="ASYNC"/>
             </cache-container>
             <cache-container name="entando" jndi-name="java:jboss/infinispan/entando" module="org.wildfly.clustering.server">
-                <transport lock-timeout="60000"/>
+                <transport lock-timeout="60000" channel="ee"/>
                 <invalidation-cache name="invalidation" mode="SYNC"/>
                 <distributed-cache name="Entando_Cache" mode="SYNC"/>
                 <distributed-cache name="Entando_PageManager" mode="SYNC"/>
