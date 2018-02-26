@@ -413,11 +413,9 @@
             <cache-container name="entando" default-cache="Entando_Cache" jndi-name="java:jboss/infinispan/entando" module="org.wildfly.clustering.server">
                 <transport lock-timeout="60000" channel="ee"/>
                 <invalidation-cache name="invalidation" mode="SYNC"/>
-                <distributed-cache name="Entando_Cache" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                <replicated-cache name="Entando_Cache" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
+                </replicated-cache>
                 <distributed-cache name="Entando_PageManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
                     <locking isolation="REPEATABLE_READ"/>
                     <transaction mode="BATCH"/>
@@ -458,11 +456,9 @@
                     <transaction mode="BATCH"/>
                     <file-store/>
                 </distributed-cache>
-                <distributed-cache name="Entando_CacheInfoManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                <replicated-cache name="Entando_CacheInfoManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
+                </replicated-cache>
                 <distributed-cache name="Entando_I18nManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
                     <locking isolation="REPEATABLE_READ"/>
                     <transaction mode="BATCH"/>
