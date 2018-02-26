@@ -410,7 +410,7 @@
                 </invalidation-cache>
                 <replicated-cache name="timestamps" mode="ASYNC"/>
             </cache-container>
-            <cache-container name="entando" jndi-name="java:jboss/infinispan/entando" module="org.wildfly.clustering.server">
+            <cache-container name="entando" default-cache="Entando_Cache" jndi-name="java:jboss/infinispan/entando" module="org.wildfly.clustering.server">
                 <transport lock-timeout="60000" channel="ee"/>
                 <invalidation-cache name="invalidation" mode="SYNC"/>
                 <distributed-cache name="Entando_Cache" mode="SYNC" owners="2" segments="100" capacity-factor="2">
