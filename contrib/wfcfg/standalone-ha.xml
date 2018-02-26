@@ -406,28 +406,28 @@
             </cache-container>
             <cache-container name="entando" jndi-name="java:jboss/infinispan/entando" statistics-enabled="true" module="org.wildfly.clustering.server">
                 <transport lock-timeout="60000"/>
-                <distributed-cache name="Entando_Cache"/>
-                <distributed-cache name="Entando_PageManager"/>
-                <distributed-cache name="Entando_PageModelManager"/>
-                <distributed-cache name="Entando_WidgetTypeManager"/>
-                <distributed-cache name="Entando_CategoryManager"/>
-                <distributed-cache name="Entando_ConfigManager"/>
-                <distributed-cache name="Entando_RoleManager"/>
-                <distributed-cache name="Entando_GroupManager"/>
-                <distributed-cache name="Entando_LangManager"/>
-                <distributed-cache name="Entando_CacheInfoManager"/>
-                <distributed-cache name="Entando_I18nManager"/>
-                <distributed-cache name="Entando_ApiCatalogManager"/>
-                <distributed-cache name="Entando_InitializerManager"/>
-                <distributed-cache name="Entando_DataObjectManager"/>
-                <distributed-cache name="Entando_DataObjectModelManager"/>
-                <distributed-cache name="Entando_DataObjectPageMapperManager"/>
-                <distributed-cache name="Entando_UserProfileManager"/>
-                <distributed-cache name="Entando_jacmsContentManager"/>
-                <distributed-cache name="Entando_ContentModelManager"/>
-                <distributed-cache name="Entando_ContentPageMapperManager"/>
-                <distributed-cache name="Entando_ResourceManager"/>
-                <distributed-cache name="Entando_KeyGeneratorManager"/>
+                <distributed-cache name="Entando_Cache" mode="SYNC"/>
+                <distributed-cache name="Entando_PageManager" mode="SYNC"/>
+                <distributed-cache name="Entando_PageModelManager" mode="SYNC"/>
+                <distributed-cache name="Entando_WidgetTypeManager" mode="SYNC"/>
+                <distributed-cache name="Entando_CategoryManager" mode="SYNC"/>
+                <distributed-cache name="Entando_ConfigManager" mode="SYNC"/>
+                <distributed-cache name="Entando_RoleManager" mode="SYNC"/>
+                <distributed-cache name="Entando_GroupManager" mode="SYNC"/>
+                <distributed-cache name="Entando_LangManager" mode="SYNC"/>
+                <distributed-cache name="Entando_CacheInfoManager" mode="SYNC"/>
+                <distributed-cache name="Entando_I18nManager" mode="SYNC"/>
+                <distributed-cache name="Entando_ApiCatalogManager" mode="SYNC"/>
+                <distributed-cache name="Entando_InitializerManager" mode="SYNC"/>
+                <distributed-cache name="Entando_DataObjectManager" mode="SYNC"/>
+                <distributed-cache name="Entando_DataObjectModelManager" mode="SYNC"/>
+                <distributed-cache name="Entando_DataObjectPageMapperManager" mode="SYNC"/>
+                <distributed-cache name="Entando_UserProfileManager" mode="SYNC"/>
+                <distributed-cache name="Entando_jacmsContentManager" mode="SYNC"/>
+                <distributed-cache name="Entando_ContentModelManager" mode="SYNC"/>
+                <distributed-cache name="Entando_ContentPageMapperManager" mode="SYNC"/>
+                <distributed-cache name="Entando_ResourceManager" mode="SYNC"/>
+                <distributed-cache name="Entando_KeyGeneratorManager" mode="SYNC"/>
             </cache-container>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:jaxrs:1.0"/>
