@@ -115,7 +115,7 @@
                 <level name="WARN"/>
             </logger>
             <root-logger>
-                <level name="INFO"/>
+                <level name="WARN"/>
                 <handlers>
                     <handler name="CONSOLE"/>
                     <handler name="FILE"/>
@@ -404,15 +404,9 @@
                 </invalidation-cache>
                 <replicated-cache name="timestamps" mode="ASYNC"/>
             </cache-container>
-            <cache-container default-cache="dist-sync" name="entando" jndi-name="java:jboss/infinispan/entando" module="org.wildfly.clustering.server">
+            <cache-container name="entando" jndi-name="java:jboss/infinispan/entando" module="org.wildfly.clustering.server">
                 <transport lock-timeout="60000"/>
-                <local-cache name="local"/>
                 <invalidation-cache name="invalidation" mode="SYNC"/>
-                <replicated-cache name="repl-sync" mode="SYNC"/>
-                <distributed-cache name="dist-sync" mode="SYNC"/>
-            </cache-container>
-            <cache-container name="entandololo" module="org.wildfly.clustering.server">
-                <transport lock-timeout="60000"/>
                 <distributed-cache name="Entando_Cache" mode="SYNC"/>
                 <distributed-cache name="Entando_PageManager" mode="SYNC"/>
                 <distributed-cache name="Entando_PageModelManager" mode="SYNC"/>
