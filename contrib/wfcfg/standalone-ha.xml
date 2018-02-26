@@ -115,7 +115,7 @@
                 <level name="WARN"/>
             </logger>
             <root-logger>
-                <level name="WARN"/>
+                <level name="DEBUG"/>
                 <handlers>
                     <handler name="CONSOLE"/>
                     <handler name="FILE"/>
