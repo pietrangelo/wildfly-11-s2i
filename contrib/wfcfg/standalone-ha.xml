@@ -405,7 +405,7 @@
                 <replicated-cache name="timestamps" mode="ASYNC"/>
             </cache-container>
             <cache-container default-cache="dist-sync" name="entando" jndi-name="java:jboss/infinispan/entando">
-                <transport cluster="entando"/>
+                <transport lock-timeout="60000"/>
                 <local-cache name="local"/>
                 <invalidation-cache name="invalidation" mode="SYNC"/>
                 <replicated-cache name="repl-sync" mode="SYNC"/>
