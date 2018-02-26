@@ -511,7 +511,9 @@
                         <property name="conn_close_timeout">5000</property>
                     </protocol>
                     <protocol type="pbcast.STABLE"/>
-                    <protocol type="pbcast.GMS"/>
+                    <protocol type="pbcast.GMS">
+                        <property name="join_timeout">3000</property>
+                    </protocol>
                     <protocol type="MFC"/>
                     <protocol type="FRAG2"/>
                 </stack>
