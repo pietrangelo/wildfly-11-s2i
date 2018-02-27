@@ -416,109 +416,69 @@
                 <replicated-cache name="Entando_Cache" mode="SYNC">
                     <transaction mode="BATCH"/>
                 </replicated-cache>
-                <distributed-cache name="Entando_PageManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                <replicated-cache name="Entando_PageManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_PageModelManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_PageModelManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_WidgetTypeManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_WidgetTypeManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_CategoryManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_CategoryManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_ConfigManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_ConfigManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_RoleManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_RoleManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_GroupManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_GroupManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_LangManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_LangManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
+                </replicated-cache>
                 <replicated-cache name="Entando_CacheInfoManager" mode="SYNC">
                     <transaction mode="BATCH"/>
                 </replicated-cache>
-                <distributed-cache name="Entando_I18nManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                <replicated-cache name="Entando_I18nManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_ApiCatalogManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_ApiCatalogManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_InitializerManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_InitializerManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_DataObjectManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_DataObjectManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_DataObjectModelManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_DataObjectModelManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_DataObjectPageMapperManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_DataObjectPageMapperManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_UserProfileManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_UserProfileManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_jacmsContentManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_jacmsContentManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_ContentModelManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_ContentModelManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_ContentPageMapperManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_ContentPageMapperManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_ResourceManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_ResourceManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
-                <distributed-cache name="Entando_KeyGeneratorManager" mode="SYNC" owners="2" segments="100" capacity-factor="2">
-                    <locking isolation="REPEATABLE_READ"/>
+                </replicated-cache>
+                <replicated-cache name="Entando_KeyGeneratorManager" mode="SYNC">
                     <transaction mode="BATCH"/>
-                    <file-store/>
-                </distributed-cache>
+                </replicated-cache>
             </cache-container>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:jaxrs:1.0"/>
