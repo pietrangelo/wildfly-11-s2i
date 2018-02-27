@@ -546,6 +546,7 @@
                             CREATE TABLE IF NOT EXISTS jgroupsping (own_addr VARCHAR(200) NOT NULL, cluster_name VARCHAR(200) NOT NULL, ping_data BYTEA DEFAULT NULL, PRIMARY KEY (own_addr, cluster_name))
                         </property>
                     </protocol>
+                    <protocol type="PING"/>
                     <protocol type="MERGE3"/>
                     <protocol type="FD_SOCK" socket-binding="jgroups-tcp-fd"/>
                     <protocol type="FD"/>
