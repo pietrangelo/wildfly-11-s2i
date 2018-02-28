@@ -441,16 +441,14 @@
                       isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
-                      mode="NONE"
-                      stop-timeout="30000"/>
+                      mode="FULL_XA"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_CategoryManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
-                      mode="NONE"
-                      stop-timeout="30000"/>
+                      mode="FULL_XA"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_ConfigManager" mode="SYNC" statistics-enabled="true">
                   <locking
