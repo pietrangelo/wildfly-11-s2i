@@ -611,7 +611,7 @@
         <subsystem xmlns="urn:jboss:domain:jdr:1.0"/>
         <subsystem xmlns="urn:jboss:domain:jgroups:5.0">
             <channels default="ee">
-                <channel name="ee" stack="pgping" cluster="entando"/>
+                <channel name="ee" stack="udp" cluster="entando"/>
             </channels>
             <stacks>
                 <stack name="udp">
@@ -770,7 +770,7 @@
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:singleton:1.0">
             <singleton-policies default="default">
-                <singleton-policy name="default" cache-container="server">
+                <singleton-policy name="default" cache-container="entando">
                     <simple-election-policy/>
                 </singleton-policy>
             </singleton-policies>
