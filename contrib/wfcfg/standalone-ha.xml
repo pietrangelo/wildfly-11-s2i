@@ -412,72 +412,401 @@
             </cache-container>
             <cache-container name="entando" default-cache="Entando_Cache" jndi-name="java:jboss/infinispan/entando" module="org.wildfly.clustering.server">
                 <transport lock-timeout="60000" channel="ee"/>
-                <invalidation-cache name="invalidation" mode="SYNC"/>
                 <replicated-cache name="Entando_Cache" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_PageManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_PageModelManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_WidgetTypeManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_CategoryManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_ConfigManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_RoleManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_GroupManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_LangManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_CacheInfoManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_I18nManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_ApiCatalogManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_InitializerManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_DataObjectManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_DataObjectModelManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_DataObjectPageMapperManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_UserProfileManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_jacmsContentManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_ContentModelManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_ContentPageMapperManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_ResourceManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
                 <replicated-cache name="Entando_KeyGeneratorManager" mode="SYNC">
-                    <transaction mode="NONE"/>
+                  <locking
+                      isolation="READ_COMMITTED"
+                      write-skew="false"/>
+                  <transaction
+                      locking="OPTIMISTIC"
+                      auto-commit="true"
+                      complete-timeout="60000"
+                      mode="NONE"
+                      notifications="true"
+                      protocol="DEFAULT"
+                      reaper-interval="30000"
+                      recovery-cache="__recoveryInfoCacheName__"
+                      stop-timeout="30000"
+                      transaction-manager-lookup="org.infinispan.transaction.lookup.GenericTransactionManagerLookup"/>
+                  <versioning
+                      scheme="NONE"/>
                 </replicated-cache>
             </cache-container>
         </subsystem>
@@ -663,7 +992,7 @@
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:singleton:1.0">
             <singleton-policies default="default">
-                <singleton-policy name="default" cache-container="server">
+                <singleton-policy name="default" cache-container="entando">
                     <simple-election-policy/>
                 </singleton-policy>
             </singleton-policies>
