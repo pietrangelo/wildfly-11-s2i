@@ -410,9 +410,9 @@
                 </invalidation-cache>
                 <replicated-cache name="timestamps" mode="ASYNC"/>
             </cache-container>
-            <cache-container name="entando" default-cache="Entando_Cache" jndi-name="java:jboss/infinispan/entando" module="org.wildfly.clustering.server">
+            <cache-container name="entando" default-cache="Entando_Cache" jndi-name="java:jboss/infinispan/entando" statistics-enabled="true" module="org.wildfly.clustering.server">
                 <transport lock-timeout="60000"/>
-                <replicated-cache name="Entando_Cache" mode="SYNC">
+                <replicated-cache name="Entando_Cache" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -420,7 +420,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_PageManager" mode="SYNC">
+                <replicated-cache name="Entando_PageManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -428,7 +428,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_PageModelManager" mode="SYNC">
+                <replicated-cache name="Entando_PageModelManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -436,7 +436,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_WidgetTypeManager" mode="SYNC">
+                <replicated-cache name="Entando_WidgetTypeManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -444,7 +444,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_CategoryManager" mode="SYNC">
+                <replicated-cache name="Entando_CategoryManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -452,7 +452,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_ConfigManager" mode="SYNC">
+                <replicated-cache name="Entando_ConfigManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -460,7 +460,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_RoleManager" mode="SYNC">
+                <replicated-cache name="Entando_RoleManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -468,7 +468,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_GroupManager" mode="SYNC">
+                <replicated-cache name="Entando_GroupManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -476,7 +476,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_LangManager" mode="SYNC">
+                <replicated-cache name="Entando_LangManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -484,7 +484,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_CacheInfoManager" mode="SYNC">
+                <replicated-cache name="Entando_CacheInfoManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -492,7 +492,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_I18nManager" mode="SYNC">
+                <replicated-cache name="Entando_I18nManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -500,7 +500,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_ApiCatalogManager" mode="SYNC">
+                <replicated-cache name="Entando_ApiCatalogManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -508,7 +508,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_InitializerManager" mode="SYNC">
+                <replicated-cache name="Entando_InitializerManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -516,7 +516,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_DataObjectManager" mode="SYNC">
+                <replicated-cache name="Entando_DataObjectManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -524,7 +524,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_DataObjectModelManager" mode="SYNC">
+                <replicated-cache name="Entando_DataObjectModelManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -532,7 +532,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_DataObjectPageMapperManager" mode="SYNC">
+                <replicated-cache name="Entando_DataObjectPageMapperManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -540,7 +540,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_UserProfileManager" mode="SYNC">
+                <replicated-cache name="Entando_UserProfileManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -548,7 +548,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_jacmsContentManager" mode="SYNC">
+                <replicated-cache name="Entando_jacmsContentManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -556,7 +556,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_ContentModelManager" mode="SYNC">
+                <replicated-cache name="Entando_ContentModelManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -564,7 +564,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_ContentPageMapperManager" mode="SYNC">
+                <replicated-cache name="Entando_ContentPageMapperManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -572,7 +572,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_ResourceManager" mode="SYNC">
+                <replicated-cache name="Entando_ResourceManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -580,7 +580,7 @@
                       mode="NONE"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_KeyGeneratorManager" mode="SYNC">
+                <replicated-cache name="Entando_KeyGeneratorManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
