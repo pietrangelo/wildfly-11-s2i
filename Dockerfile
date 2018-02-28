@@ -34,7 +34,7 @@ RUN INSTALL_PKGS="tar git ImageMagick unzip bc which lsof java-1.8.0-openjdk jav
 # Add s2i wildfly customizations
 ADD ./contrib/wfmodules/ /wildfly/modules/
 ADD ./contrib/wfbin/standalone.conf /wildfly/bin/standalone.conf
-ADD ./contrib/wfcfg/standalone-ha.xml /wildfly/standalone/configuration/standalone-ha.xml
+ADD contrib/wfcfg/standalone-ha-completo.xml /wildfly/standalone/configuration/standalone-ha.xml
 ADD ./contrib/wfcfg/standalone.xml /wildfly/standalone/configuration/standalone.xml
 ADD ./contrib/settings.xml $HOME/.m2/
 
