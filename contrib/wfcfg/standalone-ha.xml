@@ -412,7 +412,7 @@
             </cache-container>
             <cache-container name="entando" default-cache="Entando_Cache" jndi-name="java:jboss/infinispan/entando" statistics-enabled="true" module="org.wildfly.clustering.server">
                 <transport lock-timeout="60000"/>
-                <replicated-cache name="Entando_Cache" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_Cache" jndi-name="java:jboss/infinispan/entando/Entando_Cache" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -420,7 +420,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_PageManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_PageManager" jndi-name="java:jboss/infinispan/entando/Entando_PageManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -428,7 +428,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_PageModelManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_PageModelManager" jndi-name="java:jboss/infinispan/entando/Entando_PageModelManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -436,21 +436,21 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_WidgetTypeManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_WidgetTypeManager" jndi-name="java:jboss/infinispan/entando/Entando_WidgetTypeManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       mode="FULL_XA"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_CategoryManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_CategoryManager" jndi-name="java:jboss/infinispan/entando/Entando_CategoryManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       mode="FULL_XA"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_ConfigManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_ConfigManager" jndi-name="java:jboss/infinispan/entando/Entando_ConfigManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -458,7 +458,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_RoleManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_RoleManager" jndi-name="java:jboss/infinispan/entando/Entando_RoleManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -466,7 +466,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_GroupManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_GroupManager" jndi-name="java:jboss/infinispan/entando/Entando_GroupManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -474,7 +474,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_LangManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_LangManager" jndi-name="java:jboss/infinispan/entando/Entando_LangManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -482,7 +482,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_CacheInfoManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_CacheInfoManager" jndi-name="java:jboss/infinispan/entando/Entando_CacheInfoManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -490,7 +490,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_I18nManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_I18nManager" jndi-name="java:jboss/infinispan/entando/Entando_I18nManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -498,7 +498,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_ApiCatalogManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_ApiCatalogManager" jndi-name="java:jboss/infinispan/entando/Entando_ApiCatalogManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -506,7 +506,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_InitializerManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_InitializerManager" jndi-name="java:jboss/infinispan/entando/Entando_InitializerManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -514,7 +514,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_DataObjectManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_DataObjectManager" jndi-name="java:jboss/infinispan/entando/Entando_DataObjectManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -522,7 +522,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_DataObjectModelManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_DataObjectModelManager" jndi-name="java:jboss/infinispan/entando/Entando_DataObjectModelManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -530,7 +530,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_DataObjectPageMapperManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_DataObjectPageMapperManager" jndi-name="java:jboss/infinispan/entando/Entando_DataObjectPageMapperManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -538,7 +538,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_UserProfileManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_UserProfileManager" jndi-name="java:jboss/infinispan/entando/Entando_UserProfileManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -546,7 +546,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_jacmsContentManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_jacmsContentManager" jndi-name="java:jboss/infinispan/entando/Entando_jacmsContentManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -554,7 +554,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_ContentModelManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_ContentModelManager" jndi-name="java:jboss/infinispan/entando/Entando_ContentModelManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -562,7 +562,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_ContentPageMapperManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_ContentPageMapperManager" jndi-name="java:jboss/infinispan/entando/Entando_ContentPageMapperManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -570,7 +570,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_ResourceManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_ResourceManager" jndi-name="java:jboss/infinispan/entando/Entando_ResourceManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
@@ -578,7 +578,7 @@
                       mode="FULL_XA"
                       stop-timeout="30000"/>
                 </replicated-cache>
-                <replicated-cache name="Entando_KeyGeneratorManager" jndi-name="java:jboss/infinispan/entando" mode="SYNC" statistics-enabled="true">
+                <replicated-cache name="Entando_KeyGeneratorManager" jndi-name="java:jboss/infinispan/entando/Entando_KeyGeneratorManager" mode="SYNC" statistics-enabled="true">
                   <locking
                       isolation="READ_COMMITTED"/>
                   <transaction
