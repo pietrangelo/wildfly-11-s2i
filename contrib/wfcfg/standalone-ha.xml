@@ -414,8 +414,7 @@
                 <transport lock-timeout="60000" channel="ee"/>
                 <replicated-cache name="Entando_Cache" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -432,8 +431,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_PageManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -450,8 +448,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_PageModelManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -468,8 +465,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_WidgetTypeManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -486,8 +482,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_CategoryManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -504,8 +499,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_ConfigManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -522,8 +516,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_RoleManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -540,8 +533,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_GroupManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -558,8 +550,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_LangManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -576,8 +567,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_CacheInfoManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -594,8 +584,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_I18nManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -612,8 +601,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_ApiCatalogManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -630,8 +618,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_InitializerManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -648,8 +635,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_DataObjectManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -666,8 +652,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_DataObjectModelManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -684,8 +669,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_DataObjectPageMapperManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -702,8 +686,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_UserProfileManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -720,8 +703,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_jacmsContentManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -738,8 +720,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_ContentModelManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -756,8 +737,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_ContentPageMapperManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -774,8 +754,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_ResourceManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
@@ -792,8 +771,7 @@
                 </replicated-cache>
                 <replicated-cache name="Entando_KeyGeneratorManager" mode="SYNC">
                   <locking
-                      isolation="READ_COMMITTED"
-                      write-skew="false"/>
+                      isolation="READ_COMMITTED"/>
                   <transaction
                       locking="OPTIMISTIC"
                       auto-commit="true"
