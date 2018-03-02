@@ -151,7 +151,7 @@
             <password>sa</password>
           </security>
         </datasource>
-        <datasource jndi-name="java:jboss/datasources/entandoDbPort" enabled="true" use-java-context="true" pool-name="entandoDbPortDataSource" use-ccm="true">
+        <datasource jndi-name="java:jboss/datasources/entandoDbPort2" enabled="true" use-java-context="true" pool-name="entandoDbPortDataSource" use-ccm="true">
           <connection-url>jdbc:postgresql://www.entando.com:5433/entandoDbPort2</connection-url>
           <driver>postgresql</driver>
           <security>
@@ -168,7 +168,7 @@
             <flush-strategy>IdleConnections</flush-strategy>
           </pool>
         </datasource>
-        <datasource jndi-name="java:jboss/datasources/entandoDbServ" enabled="true" use-java-context="true" pool-name="entandoDbServDataSource" use-ccm="true">
+        <datasource jndi-name="java:jboss/datasources/entandoDbServ2" enabled="true" use-java-context="true" pool-name="entandoDbServDataSource" use-ccm="true">
           <connection-url>jdbc:postgresql://www.entando.com:5433/entandoDbServ2</connection-url>
           <driver>postgresql</driver>
           <security>
