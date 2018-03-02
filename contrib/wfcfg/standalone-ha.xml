@@ -151,40 +151,40 @@
             <password>sa</password>
           </security>
         </datasource>
-        <datasource jndi-name="java:jboss/datasources/entandoDbPort2" enabled="true" use-java-context="true" pool-name="entandoDbPortDataSource" use-ccm="true">
-          <connection-url>jdbc:postgresql://www.entando.com:5433/entandoDbPort2</connection-url>
-          <driver>postgresql</driver>
-          <security>
-            <user-name>entando</user-name>
-            <password>entando</password>
-          </security>
-          <validation>
-            <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
-            <background-validation>true</background-validation>
-            <background-validation-millis>60000</background-validation-millis>
-            <!--<validate-on-match>true</validate-on-match>-->
-          </validation>
-          <pool>
-            <flush-strategy>IdleConnections</flush-strategy>
-          </pool>
-        </datasource>
-        <datasource jndi-name="java:jboss/datasources/entandoDbServ2" enabled="true" use-java-context="true" pool-name="entandoDbServDataSource" use-ccm="true">
-          <connection-url>jdbc:postgresql://www.entando.com:5433/entandoDbServ2</connection-url>
-          <driver>postgresql</driver>
-          <security>
-            <user-name>entando</user-name>
-            <password>entando</password>
-          </security>
-          <validation>
-            <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
-            <background-validation>true</background-validation>
-            <background-validation-millis>60000</background-validation-millis>
-            <!--<validate-on-match>true</validate-on-match>-->
-          </validation>
-          <pool>
-            <flush-strategy>IdleConnections</flush-strategy>
-          </pool>
-        </datasource>
+        <datasource jndi-name="${env.PG_ENTANDO_PORT_DB_JNDI_NAME}" enabled="true" use-java-context="true" pool-name="entandoDbPortDataSource" use-ccm="true">
+                    <connection-url>jdbc:postgresql://${env.PG_ENTANDO_PORT_DB_CONNECTION_STRING}</connection-url>
+                    <driver>postgresql</driver>
+                    <security>
+                      <user-name>${env.PG_USERNAME}</user-name>
+                      <password>${env.PG_PASSWORD}</password>
+                    </security>
+                    <validation>
+                        <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
+                        <background-validation>true</background-validation>
+                        <background-validation-millis>60000</background-validation-millis>
+                        <!--<validate-on-match>true</validate-on-match>-->
+                    </validation>
+                    <pool>
+                        <flush-strategy>IdleConnections</flush-strategy>
+                    </pool>
+                </datasource>
+                <datasource jndi-name="${env.PG_ENTANDO_SERV_DB_JNDI_NAME}" enabled="true" use-java-context="true" pool-name="entandoDbServDataSource" use-ccm="true">
+                    <connection-url>jdbc:postgresql://${env.PG_ENTANDO_SERV_DB_CONNECTION_STRING}</connection-url>
+                    <driver>postgresql</driver>
+                    <security>
+                      <user-name>${env.PG_USERNAME}</user-name>
+                      <password>${env.PG_PASSWORD}</password>
+                    </security>
+                    <validation>
+                        <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
+                        <background-validation>true</background-validation>
+                        <background-validation-millis>60000</background-validation-millis>
+                        <!--<validate-on-match>true</validate-on-match>-->
+                    </validation>
+                    <pool>
+                        <flush-strategy>IdleConnections</flush-strategy>
+                    </pool>
+                </datasource>
         <drivers>
           <driver name="h2" module="com.h2database.h2">
             <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
