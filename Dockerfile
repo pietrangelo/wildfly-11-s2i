@@ -39,13 +39,13 @@ ADD ./contrib/wfcfg/standalone.xml /wildfly/standalone/configuration/standalone.
 ADD ./contrib/settings.xml $HOME/.m2/
 
 # install All Entando dependencies on the EN-4.3.2-CloudNative tag
-RUN git clone https://github.com/entando/entando-core.git && \
-    git clone https://github.com/entando/entando-components.git && \
-    git clone https://github.com/entando/entando-archetypes.git && \
-    cd entando-core && git checkout pure_cloud_native && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
-    cd ../entando-components && git checkout pure_cloud_native && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
-    cd ../entando-archetypes && git checkout pure_cloud_native && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
-    rm -rf /opt/app-root/src/entando*
+#RUN git clone https://github.com/entando/entando-core.git && \
+#    git clone https://github.com/entando/entando-components.git && \
+#    git clone https://github.com/entando/entando-archetypes.git && \
+#    cd entando-core && git checkout pure_cloud_native && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
+#    cd ../entando-components && git checkout pure_cloud_native && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
+#    cd ../entando-archetypes && git checkout pure_cloud_native && mvn -Dmaven.repo.local=/opt/s2i/destination/artifacts/.m2/repository install -DskipTests && mvn clean && \
+#    rm -rf /opt/app-root/src/entando*
 
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
