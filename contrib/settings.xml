@@ -189,8 +189,31 @@
       </pluginRepositories>
     </profile>
 
+    <!-- entando repository -->
+    <profile>
+      <id>nexus</id>
+      <repositories>
+        <repository>
+          <id>nexus</id>
+          <url>http://repository.entando.org/repository/maven-public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>nexus</id>
+          <url>http://repository.entando.org/repository/maven-public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+
   </profiles>
   <activeProfiles>
-    <activeProfile>securecentral</activeProfile>
+    <activeProfile>nexus</activeProfile>
   </activeProfiles>
 </settings>
