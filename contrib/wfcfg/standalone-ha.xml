@@ -428,6 +428,8 @@
                     <replicated-cache name="Entando_ContentModelManager" statistics-enabled="false" mode="SYNC"/>
                     <replicated-cache name="Entando_KeyGeneratorManager" statistics-enabled="false" mode="SYNC"/>
                     <replicated-cache name="Entando_ResourceManager" statistics-enabled="false" mode="SYNC"/>
+                    <replicated-cache name="Entando_DataObjectPageMapperManager" statistics-enabled="false" mode="SYNC"/>
+                    <replicated-cache name="Entando_ContentPageMapperManager" statistics-enabled="false" mode="SYNC"/>
                 </cache-container>
     </subsystem>
     <subsystem xmlns="urn:jboss:domain:jaxrs:1.0"/>
